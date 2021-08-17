@@ -21,7 +21,7 @@ const tail = function(array) {
 let array = ["Light", "House", "Labs"];
 tail(array);
 assertEqual(array.length, 3);
-
+console.log(tail(array));
 let result = tail(array);
 assertEqual(result.length, 2);
 assertEqual(result[0], "House");
@@ -31,7 +31,7 @@ assertEqual(result[1], "Labs");
 array = [1,2,3,4,5];
 tail(array);
 assertEqual(array.length, 5);
-
+console.log(tail(array));
 result = tail(array);
 assertEqual(result.length, 4);
 assertEqual(result[0], 2);
@@ -43,7 +43,7 @@ assertEqual(result[3], 5);
 array = [1];
 tail(array);
 assertEqual(array.length, 1);
-
+console.log(tail(array));
 result = tail(array);
 assertEqual(result.length, 0);
 assertEqual(result[0], undefined);
@@ -52,7 +52,7 @@ assertEqual(result[0], undefined);
 array = [1,2,3,4,5];
 tail(array);
 assertEqual(array.length, 5);
-
+console.log(tail(array));
 result = tail(array);
 assertEqual(result.length, 3);
 assertEqual(result[0], 1);
