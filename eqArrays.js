@@ -11,14 +11,13 @@ const eqArrays = function(arrayA, arrayB) {
 
   for (let i = 0; i < arrayA.length; i++) {
     for (let j = 0; j < arrayB.length; j++) {
-      if (i === j && arrayA[i] !== arrayB[j]){
+      if (i === j && arrayA[i] !== arrayB[j]) {
         output = false;
       }
     }
   }
-  return output
-}
-
+  return output;
+};
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
 assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true);
