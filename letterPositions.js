@@ -26,8 +26,9 @@ const assertArraysEqual = function(arrayA, arrayB,) {
 //skip spaces
 
 const letterPositions = function(string) {
-  string = string.replace(/\s/g, '');
   const results ={};
+
+  for (let i =)
 }
 
 letterPositions("test");
