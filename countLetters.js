@@ -6,11 +6,6 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-//create empty object
-//loop through string
-//if then add/count each unique letter in the string adding to a object
-//skip spaces
-
 const countLetters = function(string) {
   const results = {};
   
@@ -24,6 +19,7 @@ const countLetters = function(string) {
 
   return results;
 }
+
 
 
 const result1 = countLetters("this is a test");

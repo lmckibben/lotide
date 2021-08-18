@@ -28,10 +28,17 @@ const assertArraysEqual = function(arrayA, arrayB,) {
 const letterPositions = function(string) {
   const results ={};
 
-  for (let i =)
+  for (let i = 0; i < string.length; i++) {
+    if (results[string[i]]) {
+      results[string[i]].push(i);
+    }else if (string[i] !== " " ) {
+      results[string[i]] = [i];
+    }
+  }
+  return results
 }
 
-letterPositions("test");
-//assertArraysEqual(letterPositions("test").t, [2]);
-//assertArraysEqual(letterPositions("e").e, [1]);
-//assertArraysEqual(letterPositions("s").s, [1]);
+const result1 = letterPositions("test")
+//assertArraysEqual(result1.t, [0, 3]);
+//assertArraysEqual(result1.e, [1]);
+//assertArraysEqual(result1.s, [2]);
