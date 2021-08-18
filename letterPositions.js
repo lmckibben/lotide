@@ -19,10 +19,18 @@ const assertArraysEqual = function(arrayA, arrayB,) {
   }
 };
 
+//create empty object
+//loop through string
+//check if letter is in object and if not added it along with an array of the index
+//if it is add the index to the array
+//skip spaces
+
 const letterPositions = function(string) {
-  
+  string = string.replace(/\s/g, '');
+  const results ={};
 }
 
-assertArraysEqual(letterPositions("test").t, [2]);
-assertArraysEqual(letterPositions("e").e, [1]);
-assertArraysEqual(letterPositions("s").s, [1]);
+letterPositions("test");
+//assertArraysEqual(letterPositions("test").t, [2]);
+//assertArraysEqual(letterPositions("e").e, [1]);
+//assertArraysEqual(letterPositions("s").s, [1]);
