@@ -20,8 +20,13 @@ const assertArraysEqual = function(arrayA, arrayB,) {
 };
 
 const flatten = function(array) {
-  const flatten = [].concat.apply([], array);
-  return flatten;
+  output = [];
+  for (let index of array) {
+    for (let i = 0; i < index.length; i++) {
+      output.push(index[i]);
+    }
+  }
+  return output;
 }
 
 assertArraysEqual(flatten([[1], [2], [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
