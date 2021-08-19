@@ -58,4 +58,3 @@ assertObjectsEqual(cd, dc);
 const cd2 = { c: "1", d: ["2", 3, 4] };
 console.log("eqObjects:", eqObjects(dc, cd2));
 assertObjectsEqual(cd, cd2);
-
