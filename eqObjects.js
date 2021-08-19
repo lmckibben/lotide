@@ -7,11 +7,20 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqObjects = function(object1, object2) {
-  if (Object.keys(object1).length !== Object.keys(object2).length){
+  const objKeys1 = Object.keys(object1);
+  const objKeys2 = Object.keys(object2);
+
+  if (objKeys1.length !== objKeys2.length) {
     return false
   }
-}
 
+  for (const keys of objKeys1) {
+    if (object1[keys] !== object2[keys]) {
+      return false
+    }
+  }
+  return true
+};
 
 
 const ab = { a: "1", b: "2" };
@@ -22,4 +31,3 @@ assertEqual(eqObjects(ab, ba), true);
 const abc = { a: "1", b: "2", c: "3" };
 eqObjects(ab, abc); // => false
 assertEqual(eqObjects(ab, abc), false );
-
