@@ -1,45 +1,31 @@
-const assertEqual = require(('../assertEqual'));
+const assert = require('chai').assert;
 const tail = require(('../tail'));
 
-//test 1
-let array = ["Light", "House", "Labs"];
-tail(array);
-assertEqual(array.length, 3);
-console.log(tail(array));
-let result = tail(array);
-assertEqual(result.length, 2);
-assertEqual(result[0], "House");
-assertEqual(result[1], "Labs");
+describe("#tail", () => {
+  it("return ['House, 'Labs'] for ['Light', 'House', 'Labs']", () => {
+    const array = ['Light', 'House', 'Labs'];
+    assert.deepEqual(tail(array), ['House', 'Labs'])
 
-//test 2
-array = [1,2,3,4,5];
-tail(array);
-assertEqual(array.length, 5);
-console.log(tail(array));
-result = tail(array);
-assertEqual(result.length, 4);
-assertEqual(result[0], 2);
-assertEqual(result[1], 3);
-assertEqual(result[2], 4);
-assertEqual(result[3], 5);
+  });
 
-//test 3
-array = [1];
-tail(array);
-assertEqual(array.length, 1);
-console.log(tail(array));
-result = tail(array);
-assertEqual(result.length, 0);
-assertEqual(result[0], undefined);
+  it("return [2, 3, 4, 5,] for [1, 2, 3, 4, 5]", () => {
+    const array = [1, 2, 3, 4, 5];
+    assert.deepEqual(tail(array), [2, 3, 4, 5]);
+  });
 
-//test 4
-array = [1,2,3,4,5];
-tail(array);
-assertEqual(array.length, 5);
-console.log(tail(array));
-result = tail(array);
-assertEqual(result.length, 4);
-assertEqual(result[0], 2);
-assertEqual(result[1], 3);
-assertEqual(result[2], 4);
-assertEqual(result[3], 5);
+  it("return [] for [1]", () => {
+    const array = [1];
+    assert.deepEqual(tail(array), []);
+  });
+  
+  it("return [] for [1]", () => {
+    const array = [1];
+    assert.deepEqual(tail(array), []);
+  });
+
+  it("return [] for []", () => {
+    const array = [];
+    assert.deepEqual(tail(array), []);
+  });
+});
+
