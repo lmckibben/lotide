@@ -1,14 +1,14 @@
 const letterPositions = function(string) {
-  const results ={};
+  const results = {};
 
   for (let i = 0; i < string.length; i++) {
     if (results[string[i]]) {
       results[string[i]].push(i);
-    }else if (string[i] !== " " ) {
+    } else if (string[i] !== " ") {
       results[string[i]] = [i];
     }
   }
-  return results
+  return results;
 };
 
 module.exports = letterPositions;

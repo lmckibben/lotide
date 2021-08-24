@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const findKeyByValue = require = require('../findKeyByValue');
+const findKeyByValue = require('../findKeyByValue');
 
 describe("#findKeyByValue", () => {
   it("return 'drama' for 'The Wire", () => {

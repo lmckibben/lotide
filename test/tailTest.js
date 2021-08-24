@@ -4,7 +4,7 @@ const tail = require(('../tail'));
 describe("#tail", () => {
   it("return ['House, 'Labs'] for ['Light', 'House', 'Labs']", () => {
     const array = ['Light', 'House', 'Labs'];
-    assert.deepEqual(tail(array), ['House', 'Labs'])
+    assert.deepEqual(tail(array), ['House', 'Labs']);
 
   });
 

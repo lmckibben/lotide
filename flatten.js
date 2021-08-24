@@ -1,7 +1,7 @@
 
 const flatten = function(array) {
   console.log("array:", array);
-  output = [];
+  const output = [];
   for (let index of array) {
     if (!Array.isArray(index)) {
       output.push(index);
