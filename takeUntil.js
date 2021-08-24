@@ -1,4 +1,4 @@
-const eqArrays = function(arrayA, arrayB) {
+/* const eqArrays = function(arrayA, arrayB) {
   let output = true;
 
   if (arrayA.length !== arrayB.length) {
@@ -19,7 +19,7 @@ const assertArraysEqual = function(arrayA, arrayB,) {
   } else if (eqArrays(arrayA, arrayB) === false) {
     console.log(`🔴🔴🔴 Assertion Failed: ${arrayA} !== ${arrayB} `);
   }
-};
+}; */
 
 
 const takeUntil = function(array, callback) {
@@ -34,8 +34,9 @@ const takeUntil = function(array, callback) {
   }
 };
 
+module.exports = takeUntil;
 
-const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
+/* const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 assertArraysEqual(takeUntil(data1, x => x < 0), [1, 2, 5, 7, 2]);
 
 console.log('---');
@@ -44,4 +45,4 @@ const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Re
 assertArraysEqual(takeUntil(data2, x => x === ','), [ 'I\'ve', 'been', 'to', 'Hollywood']);
 
 const data3 = [30, 20, 19, 39, 50, 51];
-assertArraysEqual(takeUntil(data3, x => x > 50), [30, 20, 19, 39, 50]);
+assertArraysEqual(takeUntil(data3, x => x > 50), [30, 20, 19, 39, 50]); */

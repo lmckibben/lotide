@@ -1,4 +1,4 @@
-const eqArrays = function(arrayA, arrayB) {
+/* const eqArrays = function(arrayA, arrayB) {
   let output = true;
 
   if (arrayA.length !== arrayB.length) {
@@ -20,7 +20,7 @@ const assertArraysEqual = function(arrayA, arrayB,) {
   }else if (eqArrays(arrayA, arrayB) === false) {
     console.log(`🔴🔴🔴 Assertion Failed: ${arrayA} !== ${arrayB} `);
   }
-};
+}; */
 
 const without = function(arrayA, arrayB) {
   let output = [];
@@ -38,10 +38,12 @@ const without = function(arrayA, arrayB) {
   return output;
 };
 
-const words = ["hello", "world", "lighthouse"];
+module.exports = without;
+
+/* const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]); // no need to capture return value for this test case
 // Make sure the original array was not altered by the without function
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
 console.log(without([1,2,3,4,5], [2, 3]));
-console.log(without(["this", true, 1, 2], [true, 2]));
+console.log(without(["this", true, 1, 2], [true, 2])); */

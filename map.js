@@ -1,4 +1,4 @@
-const eqArrays = function(arrayA, arrayB) {
+/* const eqArrays = function(arrayA, arrayB) {
   let output = true;
 
   if (arrayA.length !== arrayB.length) {
@@ -20,7 +20,7 @@ const assertArraysEqual = function(arrayA, arrayB,) {
     console.log(`🔴🔴🔴 Assertion Failed: ${arrayA} !== ${arrayB} `);
   }
 };
-
+ */
 const map = function(array, callback) {
   const results = [];
   for (let item of array) {
@@ -29,7 +29,9 @@ const map = function(array, callback) {
   return results;
 };
 
-assertArraysEqual(map([1, 2, 3, 4], num => num * 5), [5, 10, 15, 20]);
+module.exports = map;
+
+/* assertArraysEqual(map([1, 2, 3, 4], num => num * 5), [5, 10, 15, 20]);
 assertArraysEqual(map(['Tank', 'house', 'angry', 'nancy', 'kill', 'Yellow', 'other', 'universe' ], word => word[0]), ['T', 'h', 'a', 'n', 'k', 'Y', 'o', 'u']);
-assertArraysEqual(map([100, 500, 1000], sale => sale * 1.05), [105, 525, 1050]);
+assertArraysEqual(map([100, 500, 1000], sale => sale * 1.05), [105, 525, 1050]); */
 
